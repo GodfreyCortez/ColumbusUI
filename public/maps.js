@@ -43,6 +43,7 @@ const optRow = `
 
 $(document).ready(() => {
   $("#req-input-group").append(reqRow)
+  $("#opt-input-group").append(optRow)
 
   $("#req-add").click(() => {
     console.log("clicked req-add")
