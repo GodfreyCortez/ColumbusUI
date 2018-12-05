@@ -5,3 +5,17 @@ function initMap () {
       zoom: 15
     })
 }
+const optRow = `
+`
+
+const reqRow = `
+`
+$(document).ready(() => {
+  $("#opt-add").click(() => {
+    console.log("clicked opt-add")
+    $("#opt-input-group").append(
+    `<input type="text" placeholder="location" class="form-control"/>
+      <button>Delete -</button>`
+  )
+  })
+})
