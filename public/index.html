@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Marketplace Maps</title>
+  <title>Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="maps.css" />
   <script 
@@ -24,22 +24,18 @@
     </ul>
 
     <form>
-      <div>
-        <p> Required </p>
-        <div class="form-group">
-          <input type="text" placeholder="From" id="source" class="form-control"/>
+      <div class="form-row location-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Location" class="location"/>
         </div>
-        <input type="text" placeholder="To" id="destination" />
-        <div class="button-row"><button id="req-add">Add +</button></div>
-      </div>
-      <div>
-        <p> Optional </p>
-        <div class="form-group">
-          <input type="text" placeholder="location" class="form-control"/>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Time" />
         </div>
-        <div class="button-row"><button id="opt-add">Add +</button></div>
+        <div class="col">
+            <button type="submit" class="remove">Remove</button>
+        </div>
       </div>
-      <button type="submit" id="submit">Submit</button>
+      <button type="add" id="add-required">Add</button>
     </form>
   </div>
   <div class="content">

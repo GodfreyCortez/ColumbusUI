@@ -40,6 +40,10 @@
 #map {
     height: 100%
 }
+
+.location-row {
+    padding: 10px 30px;
+}
 .content {
     margin-left: 33%;
     height: 100%;
