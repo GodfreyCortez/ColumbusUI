@@ -5,11 +5,32 @@ function initMap () {
       zoom: 15
     })
 }
-const optRow = `
-`
 
 const reqRow = `
+            <div class="form-row location-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Location" class="location"/>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Time" />
+              </div>
+              <div class="col">
+                <button type="submit" class="Remove -">Remove</button>
+              </div>
+            </div>
 `
+
+const optRow = `
+            <div class="form-row location-row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Location" class="location"/>
+              </div>
+              <div class="col">
+                <button type="submit" class="remove">Remove -</button>
+              </div>
+            </div>
+`
+
 $(document).ready(() => {
   $("#opt-add").click(() => {
     console.log("clicked opt-add")
