@@ -24,10 +24,20 @@
     </ul>
 
     <form>
-      <div class="form-group">
-        <input type="text" placeholder="From" id="source" class="form-control"/>
+      <div>
+        <p> Required </p>
+        <div class="form-group">
+          <input type="text" placeholder="From" id="source" class="form-control"/>
+        </div>
+        <input type="text" placeholder="To" id="destination" />
+        <button type="submit" id="submit">Submit</button>
       </div>
-      <input type="text" placeholder="To" id="destination" />
+      <div>
+        <p> Optional </p>
+        <div class="form-group">
+          <input type="text" placeholder="location" class="form-control"/>
+        </div>
+      </div>
       <button type="submit" id="submit">Submit</button>
     </form>
   </div>
@@ -37,7 +47,7 @@
 
   <script src="maps.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrDhfMgAcaglG8uDC0YD_oWqSVuebspoA&callback=initMap"
-  async defer></script>
+          async defer></script>
 </body>
 
 </html>
