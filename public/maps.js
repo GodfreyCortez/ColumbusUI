@@ -9,10 +9,10 @@ function initMap () {
 const reqRow = `
             <div class="form-row location-row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Location" class="location"/>
+                <input type="text" class="form-control location" placeholder="Location" />
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Time" />
+                <input type="text" class="form-control time" placeholder="Time" />
               </div>
               <div class="col">
                 <div class="remove" onclick="return deleteRow(this);">
@@ -28,7 +28,7 @@ const reqRow = `
 const optRow = `
             <div class="form-row location-row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Location" class="location"/>
+                <input type="text" class="form-control location" placeholder="Location" />
               </div>
               <div class="col">
                 <div class="remove">
@@ -60,15 +60,22 @@ $(document).ready(() => {
   $("#submit").click(() => {
     const destinations = []
     $("#req-input-group").find(".form-row").each(function(i) {
-      console.log(i)
-      console.log(this)
+      const loca = $(this).find(".location").val()
+      const time = $(this).find(".time").val()
+      destinations.push({
+        "name": loca,
+        "time": time
+      })
     })
     const poiNames = []
     $("#opt-input-group").find(".form-row").each(function(i) {
       poiNames.push($(this).find(".location").val())
     })
-    $.post("https://columbus-224617.appspot.com//route/generate")
-    console.log(poiNames)
+    const data = { destinations, poiNames }
+    console.log(data)
+    $.post("https://columbus-224617.appspot.com//route/generate", data).done(data => {
+      console.log(`got back: ${data}`)
+    })
     return false
   })
 })
