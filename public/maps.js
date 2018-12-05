@@ -15,12 +15,12 @@ const reqRow = `
                 <input type="text" class="form-control" placeholder="Time" />
               </div>
               <div class="col">
-                <div class="remove" onclick="return deleteRow(this);">
+                <button class="remove" onclick="return deleteRow(this);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="none" d="M0 0h24v24H0z"/>
                       <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 10H8c-.55 0-1-.45-1-1s.45-1 1-1h8c.55 0 1 .45 1 1s-.45 1-1 1z"/>
                     </svg>
-                </div>
+                </button>
               </div>
             </div>
 `
@@ -64,15 +64,18 @@ $(document).ready(() => {
       console.log(this)
     })
     const poiNames = []
-    $("#opt-input-group").find(".form-row")
-    $.post("https://columbus-224617.appspot.com/swagger-ui.html#/route-gen-controller/getAppNameUsingGET")
+    $("#opt-input-group").find(".form-row").each(function(i) {
+      poiNames.push($(this).find(".location").val())
+    })
+    $.post("https://columbus-224617.appspot.com//route/generate")
+    console.log(poiNames)
     return false
   })
 })
 
-function deleteRow(element) {
-  console.log("delet!")
-  console.log(element)
+  function deleteRow(element) {
+    console.log("delet!")
+    console.log(element)
   console.log($(element).parent())
   return false
 }
