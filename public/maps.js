@@ -73,8 +73,17 @@ $(document).ready(() => {
     })
     const data = { destinations, poiNames }
     console.log(data)
-    $.post("https://columbus-224617.appspot.com//route/generate", data).done(data => {
+    $.ajax({
+      url: "https://columbus-224617.appspot.com//route/generate",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      type: 'post',
+      crossDomain: true
+    }).done(data => {
       console.log(`got back: ${data}`)
+    }).fail(err => {
+      console.log(`failed :( ${err}`)
+      console.log(err)
     })
     return false
   })
