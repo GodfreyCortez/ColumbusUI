@@ -91,9 +91,7 @@ $(document).ready(() => {
 })
 
   function deleteRow(element) {
-    console.log("delet!")
-    console.log(element)
     const row = $(element).parent().parent()
-    row.parent().remove(row)
+    row.remove()
   return false
 }
