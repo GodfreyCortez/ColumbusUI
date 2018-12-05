@@ -56,6 +56,18 @@ $(document).ready(() => {
     $("#opt-input-group").append(optRow)
     return false
   })
+
+  $("#submit").click(() => {
+    const destinations = []
+    $("#req-input-group").find(".form-row").each(function(i) {
+      console.log(i)
+      console.log(this)
+    })
+    const poiNames = []
+    $("#opt-input-group").find(".form-row")
+    $.post("https://columbus-224617.appspot.com/swagger-ui.html#/route-gen-controller/getAppNameUsingGET")
+    return false
+  })
 })
 
 function deleteRow(element) {
