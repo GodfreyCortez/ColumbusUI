@@ -81,6 +81,7 @@ $(document).ready(() => {
       crossDomain: true
     }).done(data => {
       console.log(`got back: ${data}`)
+      $("columbus-map").attr("src", data)
     }).fail(err => {
       console.log(`failed :( ${err}`)
       console.log(err)
