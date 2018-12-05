@@ -60,10 +60,31 @@
     overflow: auto;
 }
 
-.remove svg{
+.button svg{
 	padding: 0px;
 	top: 5px;
-	left:20px;
-	position: absolute;
+	left:0px;
+	position: relative;
 	background: white;
+}
+
+.button{
+	text-align: left;
+	padding-left:10px;
+}
+
+.buttonAdd{
+	text-align: center;
+}
+.buttonOpt {
+	text-align: left;
+	padding-left:10px;
+}
+
+.optInput {
+	width: 275px !important;
+}
+
+.btn-primary {
+	margin:30px;
 }
