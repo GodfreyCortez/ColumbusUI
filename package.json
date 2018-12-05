@@ -1,0 +1,19 @@
+{
+  "name": "columbus-ui",
+  "version": "1.0.0",
+  "description": "columbus-ui",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.google.com/p/columbus-224617/r/columbus-ui"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
