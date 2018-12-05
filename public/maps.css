@@ -52,3 +52,11 @@
     background: #fff;
     overflow: auto;
 }
+
+.remove svg{
+	padding: 0px;
+	top: 5px;
+	left:20px;
+	position: absolute;
+	background: white;
+}
