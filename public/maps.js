@@ -42,10 +42,13 @@ const optRow = `
 `
 
 $(document).ready(() => {
+  $("#req-input-group").append(reqRow)
+
   $("#req-add").click(() => {
     console.log("clicked req-add")
     $("#req-input-group").append(reqRow)
   })
+
   $("#opt-add").click(() => {
     console.log("clicked opt-add")
     $("#opt-input-group").append(optRow)
